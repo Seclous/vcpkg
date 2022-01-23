@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO randombit/botan
-    REF d4bd416702a65eddcc14ee06b9c1b674631e6ae3 # 2.18.1
-    SHA512 6c8a8a772ff926402aa77ea1156e8a6b8fcaa18514107c94e9d2c7c76daaf9a02ef8c5c249d1ddf56655bab0ecd0d91490d907fc2239259689662533089b09ad
+    REPO Seclous/botan
+    REF 645f05be121627057cb6945d726318587f824801 # 2.19.1
+    SHA512 0c748ca302ea8187a02dfde38efa1413541ddab869b63c7516fe386b6c3aebeadc23148bea568da8226105f34bc31d8b5c15aa584404a5947189e718d29833a1
     HEAD_REF master
     PATCHES
         fix-generate-build-path.patch
