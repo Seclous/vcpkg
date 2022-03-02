@@ -1,0 +1,10 @@
+{
+  "name": "boost-certify",
+  "version": "1.78.0",
+  "description": "Boost.ASIO-based TLS certificate verification library",
+  "homepage": "https://github.com/djarek/certify",
+  "supports": "!emscripten",
+  "dependencies": [
+    "boost-asio"
+  ]
+}
