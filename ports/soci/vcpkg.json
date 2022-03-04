@@ -27,7 +27,7 @@
     "mysql": {
       "description": "Build mysql backend",
       "dependencies": [
-        "libmysql"
+        "libmariadb"
       ]
     },
     "odbc": {
