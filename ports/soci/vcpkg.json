@@ -1,6 +1,6 @@
 {
   "name": "soci",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "description": "SOCI database access library",
   "homepage": "https://github.com/SOCI/soci",
   "dependencies": [
@@ -27,7 +27,7 @@
     "mysql": {
       "description": "Build mysql backend",
       "dependencies": [
-        "libmariadb"
+        "libmysql"
       ]
     },
     "odbc": {
