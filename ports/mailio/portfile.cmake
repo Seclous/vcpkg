@@ -1,24 +1,25 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
-    REPO karastojko/mailio
-    REF 1872f29d88a52f06cd96b611673b2e46c6b9832b # version_0-20-0
-    SHA512 1686e49ed2c7163c33f88c820633e772986ecfea5696b78a44b370f44051190b14a1ddcd055bce2a9104324c80e8045cf0441c085eb6f272261da7e80bc4fdb5
+    REPO Seclous/mailio
+    REF 48f5dc0ed50d400cd63e6f3d394390c4ba1a5036 # version_0-21-1
+    SHA512 49d2986bc2b0f1fcce6505e3358ef5808f9f7280a9aac70985cec0c5e5adce05e171dd78891d8dae7dc235759767ae0a29ea88c45669552948d387b79ddbb243
     HEAD_REF master
 )
 
 string(COMPARE EQUAL "${VCPKG_LIBRARY_LINKAGE}" "dynamic" BUILD_SHARED)
 
 vcpkg_cmake_configure(
-    SOURCE_PATH ${SOURCE_PATH}
+    SOURCE_PATH "${SOURCE_PATH}"
     PREFER_NINJA
     OPTIONS
-        -DMAILIO_BUILD_SHARED_LIBRARY=${BUILD_SHARED}
         -DMAILIO_BUILD_DOCUMENTATION=OFF
         -DMAILIO_BUILD_EXAMPLES=OFF
 )
 vcpkg_cmake_install()
+vcpkg_cmake_config_fixup()
 
 vcpkg_fixup_pkgconfig()
 
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/share")
 file(INSTALL "${SOURCE_PATH}/LICENSE" DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}" RENAME copyright)

@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO SOCI/soci
-    REF 99e2d567161a302de4f99832af76e6d3b75b68e6 #version 4.0.2
-    SHA512 d08d2383808d46d5e9550e9c7d93fb405d9e336eb38d974ba429e5b9446d3af53d4e702b90e80c67e298333da0145457fa1146d9773322676030be69de4ec4f4
+    REF 438e3549594eb59d84b434c814647648e7c2f10a #version 4.0.3
+    SHA512 506db216ae8931a3c199786a3afa5da0256d3ae6200c130acd6ba68a1c933cbd6abc95330dbd1ebba92b2a567d6a4b3b787cccbddfdb67489a0e6cffb6e4c534
     HEAD_REF master
     PATCHES
         fix-dependency-libmysql.patch
